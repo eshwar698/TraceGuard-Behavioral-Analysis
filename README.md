@@ -1,37 +1,20 @@
 # TraceGuard — Behavioural Analysis Module
 
-**A Transformer-based temporal behavioural analysis component for a
-behaviour-aware Anti-Money Laundering (AML) research framework.**
+**A Transformer-based temporal behavioural modelling component for a behaviour-aware Anti-Money Laundering (AML) research framework.**
 
-TraceGuard's behavioural module learns representations of transaction
-histories and produces behavioural risk scores for downstream AML components.
+TraceGuard's behavioural module learns representations of transaction histories and produces behavioural risk scores for downstream AML components.
 
-> **Scope:** This repository documents the behavioural analysis module.
-> It is not a complete AML platform, production deployment, or standalone
-> financial-crime decision system.
+> **Scope:** This repository documents the behavioural analysis module only. It is not a complete AML platform, production deployment, or standalone financial-crime decision system.
 
-## Overview
+## Research snapshot
 
-- Temporal transaction-sequence modelling with a Transformer encoder.
-- 128-dimensional behavioural embeddings.
-- Behavioural risk scores exposed as raw logits for downstream integration.
-- Controlled sequence-length experiments.
-- Behavioural representation and validation analyses.
-- Frozen final model selection and handoff evidence.
-
-## Final model
-
-The final locked candidate is **GELU, history length 20 (L20)**.
-
-| Property | Value |
+| Component | Final configuration |
 |---|---|
 | Architecture | Transformer encoder V3 |
-| Activation | GELU |
-| History length | 20 |
+| Activation / history | GELU / L20 |
 | Input features | 45 |
 | Model dimension | 128 |
-| Attention heads | 8 |
-| Encoder layers | 2 |
+| Attention heads / layers | 8 / 2 |
 | Feed-forward dimension | 256 |
 | Dropout | 0.10 |
 | Embedding dimension | 128 |
@@ -42,61 +25,49 @@ The final locked candidate is **GELU, history length 20 (L20)**.
 
 | Split | PR-AUC | ROC-AUC |
 |---|---:|---:|
-| Validation | 0.1526 | 0.8517 |
-| Test | 0.1863 | 0.8512 |
+| Validation | 0.152630 | 0.851712 |
+| Test | 0.186282 | 0.851212 |
 
-Validation metrics were used for model selection. Test metrics are reported
-as final observational evaluation, not as a selection criterion.
+Validation PR-AUC was used for candidate selection. Test metrics are observational and were not used to select the model. Stress evaluation was also excluded from model selection.
 
-The test set and stress evaluation were not used to select the final model.
+## What this repository contains
 
-## Repository structure
+- Temporal transaction-sequence modelling with a Transformer encoder.
+- Behavioural representation and embedding-quality analyses.
+- Controlled sequence-length experiments.
+- Hard-negative learning and ablation analyses.
+- Final validation, model-lock, and downstream handoff evidence.
 
-```text
-TraceGuard-Behavioral-Analysis/
-├── README.md
-├── LICENSE
-├── CITATION.cff
-├── .gitignore
-├── docs/
-│   ├── methodology.md
-│   ├── results.md
-│   ├── model_card.md
-│   ├── limitations.md
-│   └── evidence/
-├── notebooks/
-├── results/
-│   └── figures/
-└── artifacts/
-```
+## Research walkthroughs
 
-## Notebooks
+1. [Data preparation and temporal sequences](notebooks/01_data_preparation_and_temporal_sequences.ipynb)
+2. [Behavioural Transformer architecture](notebooks/02_behavioral_transformer_architecture.ipynb)
+3. [Training and sequence-length experiments](notebooks/03_training_and_sequence_length_experiments.ipynb)
+4. [Behavioural embedding quality](notebooks/04_behavioral_embedding_quality.ipynb)
+5. [Hard-negative learning and ablation](notebooks/05_hard_negative_learning_and_ablation.ipynb)
+6. [Final validation and model handoff](notebooks/06_final_validation_and_model_handoff.ipynb)
 
-1. Data preparation and temporal sequences
-2. Behavioural Transformer architecture
-3. Training and sequence-length experiments
-4. Behavioural embedding quality
-5. Hard-negative learning and ablation
-6. Final validation and model handoff
+These are curated research walkthroughs. Original private data and model checkpoints are not included; therefore, full training is not reproducible from this repository alone.
 
-These notebooks are curated research walkthroughs. The original private
-data and model checkpoints are not included, so full training is not
-reproducible from this repository alone.
+## Documentation and evidence
 
-## Evidence
+- [Methodology](docs/methodology.md)
+- [Results and interpretation](docs/results.md)
+- [Model card](docs/model_card.md)
+- [Limitations](docs/limitations.md)
+- [Final model-lock JSON](docs/evidence/models__behavior_v3_l20_final_lock__TRACEGUARD_BEHAVIOR_ANALYSIS_FINAL_LOCK.json)
+- [Final model-lock report](docs/evidence/models__behavior_v3_l20_final_lock__TRACEGUARD_BEHAVIOR_ANALYSIS_FINAL_LOCK.md)
+- [Evidence manifest and SHA-256 hashes](docs/evidence/evidence_manifest.json)
+- [Evidence directory](docs/evidence/)
 
-Selected experiment outputs and the final model lock are available under
-[`docs/evidence/`](docs/evidence/). See the evidence manifest for file
-integrity hashes and source-artifact lineage.
-
-## Limitations
+## Interpretation and limitations
 
 - The model is a research component, not a calibrated probability engine.
-- A raw risk logit is not a probability or an AML decision.
-- No claim of real-world deployment effectiveness is made.
-- Dataset access and checkpoint availability are restricted/not included.
+- Behavioural risk scores are raw logits; they are not probabilities or AML decisions.
+- Offline metrics do not establish real-world or operational AML effectiveness.
+- Original dataset access is restricted, and model checkpoints are not included in this repository.
 - Human review and independent validation remain necessary.
 
-## Status
+## Project status
 
 **Behavioural analysis module completed; wider TraceGuard integration remains ongoing.**
