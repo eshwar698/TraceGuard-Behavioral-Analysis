@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this research, please cite the repository."
+title: "TraceGuard Behavioural Analysis Module"
+type: software
+authors:
+  - family-names: "L"
+    given-names: "Eshwar"
+repository-code: "https://github.com/eshwar698/TraceGuard-Behavioral-Analysis"
+abstract: "Transformer-based temporal behavioural analysis module for a behaviour-aware AML research framework."

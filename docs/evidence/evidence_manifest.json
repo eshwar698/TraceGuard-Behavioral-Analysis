@@ -1,0 +1,84 @@
+{
+  "description": "Selected TraceGuard behavioral-analysis evidence",
+  "source": "Original Drive artifacts; source files are not modified.",
+  "files": [
+    {
+      "source_relative_path": "models/behavior_v3_l20_final_lock/TRACEGUARD_BEHAVIOR_ANALYSIS_FINAL_LOCK.json",
+      "repository_file": "docs/evidence/models__behavior_v3_l20_final_lock__TRACEGUARD_BEHAVIOR_ANALYSIS_FINAL_LOCK.json",
+      "bytes": 3028,
+      "sha256": "660f68dbf4835e82515510929fa0c008793b405d905c9fa5abe143b7e5353650"
+    },
+    {
+      "source_relative_path": "models/behavior_v3_l20_final_lock/TRACEGUARD_BEHAVIOR_ANALYSIS_FINAL_LOCK.md",
+      "repository_file": "docs/evidence/models__behavior_v3_l20_final_lock__TRACEGUARD_BEHAVIOR_ANALYSIS_FINAL_LOCK.md",
+      "bytes": 4696,
+      "sha256": "5d58cf87558636556a15f877787d1a1a17b1e79ee53e2f7ecbc3be8c2cfdff50"
+    },
+    {
+      "source_relative_path": "models/v3_experiments/traceguard_v1_vs_v3_final_evidence_summary.json",
+      "repository_file": "docs/evidence/models__v3_experiments__traceguard_v1_vs_v3_final_evidence_summary.json",
+      "bytes": 2682,
+      "sha256": "4661829579e18b09586b64cd4b38c19e179706f25a7dd349b69c2cebe9214a4e"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/primary_results_L5.json",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__primary_results_L5.json",
+      "bytes": 5137,
+      "sha256": "31f371c01659f16c384cd40a661abe9b9d1d4e190dc65e8aff890cdbcdaa5e38"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/primary_results_L7.json",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__primary_results_L7.json",
+      "bytes": 5143,
+      "sha256": "944c5444329212eda0027c4c2d4f7616c727ef5ba6d81e0cb1754bf61b9d4dc9"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/primary_results_L10.json",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__primary_results_L10.json",
+      "bytes": 5145,
+      "sha256": "e0de5a72ce22fe8a6f1ddfee151a188c600df7cbabaa7fadc2b272e3fe9824b9"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/primary_results_L15.json",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__primary_results_L15.json",
+      "bytes": 5149,
+      "sha256": "dda121ae4260aa1bd8495a8d9918704c81b47269b68103fc2466451180f0604f"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/primary_results_L20.json",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__primary_results_L20.json",
+      "bytes": 5138,
+      "sha256": "6cad1a27d42daecfc0bff72fa1e4e21aae08b69deff2c93843e7e08e2a3445c7"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/training_history_L5.csv",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__training_history_L5.csv",
+      "bytes": 868,
+      "sha256": "425ee094c60adef0242b509f5d83b668bb40a8a22f7bd8c2228ecea7057b255a"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/training_history_L7.csv",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__training_history_L7.csv",
+      "bytes": 865,
+      "sha256": "f764689e52f7eab9709c44ba9474e76e943f3669595ad98dd7ab0df9f0d66d5c"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/training_history_L10.csv",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__training_history_L10.csv",
+      "bytes": 868,
+      "sha256": "c36914d874c2a5ef43dbaceb5700fe3d339151e9aff00f9585c85d88226e520c"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/training_history_L15.csv",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__training_history_L15.csv",
+      "bytes": 868,
+      "sha256": "60ee441cc21670a1291b74f2ec03d5f9bb431ec04d43432f60d4126d6e857896"
+    },
+    {
+      "source_relative_path": "models/sequence_length_experiment/results/final_controlled_experiment/training_history_L20.csv",
+      "repository_file": "docs/evidence/models__sequence_length_experiment__results__final_controlled_experiment__training_history_L20.csv",
+      "bytes": 862,
+      "sha256": "4ec36add4186313f840f163a5ec84a5efc55d5ab443681e3c1dd3c534e764730"
+    }
+  ]
+}

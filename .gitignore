@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+credentials.json
+token.json
+
+# Data and model binaries
+data/
+datasets/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+*.h5
+*.parquet
+
+# Local/runtime
+.DS_Store
+Thumbs.db

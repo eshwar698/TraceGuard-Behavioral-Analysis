@@ -1,0 +1,88 @@
+{
+  "artifact": "TraceGuard Behavioral Analysis \u2014 Official Final Model Lock",
+  "status": "FINAL",
+  "decision": "GELU_L20_SELECTED",
+  "decision_basis": {
+    "selection_principle": "Validation-first model selection",
+    "selection_metric": "Validation PR-AUC",
+    "test_used_for_selection": false,
+    "stress_test_used_for_selection": false,
+    "training_modified_after_selection": false
+  },
+  "model": {
+    "family": "TraceGuard Behavioral Transformer V3",
+    "activation": "GELU",
+    "sequence_length": 20,
+    "input_dimension": 45,
+    "d_model": 128,
+    "attention_heads": 8,
+    "transformer_layers": 2,
+    "feedforward_dimension": 256,
+    "dropout": 0.1,
+    "norm_first": true,
+    "batch_first": true,
+    "positional_encoding": false,
+    "pooling": "Padding-aware mean pooling",
+    "behavior_embedding_dimension": 128,
+    "parameters": 296193
+  },
+  "checkpoint": {
+    "path": "/content/drive/MyDrive/TraceGaurd/models/sequence_length_experiment/results/final_controlled_experiment/checkpoints/traceguard_behavior_v3_sequence_length_L20_best.pt",
+    "sha256": "dd5b28e1c86c5e9b7f4b925b1fded9278d2c1e830d45ffa1c5cc4cf9bb51ed67",
+    "best_epoch": 10
+  },
+  "validation_selection": {
+    "pr_auc": 0.152630297708,
+    "roc_auc": 0.851712034221
+  },
+  "frozen_test_evaluation": {
+    "pr_auc": 0.186282136893,
+    "roc_auc": 0.851212431471,
+    "selection_use": false
+  },
+  "handoff": {
+    "path": "/content/drive/MyDrive/TraceGaurd/models/behavior_v3_l20_handoff",
+    "status": "FROZEN",
+    "purpose": "Downstream fusion",
+    "embedding_dimension": 128,
+    "risk_output": "Raw behavioral risk logit",
+    "sigmoid_applied": false,
+    "calibrated_probability": false,
+    "threshold_optimized": false
+  },
+  "handoff_outputs": {
+    "train_rows": 3731672,
+    "validation_rows": 1137240,
+    "test_rows": 208325,
+    "stress_rows": 1108,
+    "global_rows": 5078345,
+    "alignment_key": "Original_Index"
+  },
+  "final_t4_reproduction_audit": {
+    "runtime": "Tesla T4",
+    "cuda_available": true,
+    "inference_mode": true,
+    "batch_size": 4096,
+    "index_membership_exact": true,
+    "index_order_exact": true,
+    "embedding_max_absolute_difference": 0.0,
+    "embedding_mean_absolute_difference": 0.0,
+    "risk_max_absolute_difference": 2.86102294921875e-06,
+    "risk_mean_absolute_difference": 4.307244125811849e-07,
+    "stored_risk_mean": -8.759546279907227,
+    "reproduced_risk_mean": -8.759546279907227,
+    "stored_risk_median": -9.228229522705078,
+    "reproduced_risk_median": -9.228229522705078,
+    "fully_padded_test_rows": 4,
+    "fully_padded_embedding_zero": true,
+    "fully_padded_risk_zero": true,
+    "handoff_modified": false
+  },
+  "artifact_policy": {
+    "official_final_handoff": "behavior_v3_l20_handoff",
+    "previous_v3_l10_handoff": "Preserved as historical baseline",
+    "relu_l20_handoff": "Preserved as alternative experiment",
+    "previous_relu_final_lock": "Superseded; preserved for audit history",
+    "delete_previous_artifacts": false
+  }
+}

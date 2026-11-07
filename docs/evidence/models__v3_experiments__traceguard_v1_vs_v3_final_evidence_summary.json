@@ -1,0 +1,102 @@
+{
+  "core_test_ranking": {
+    "V1": {
+      "test_pr_auc": 0.061587,
+      "test_roc_auc": 0.787951
+    },
+    "V3": {
+      "test_pr_auc": 0.134444,
+      "test_roc_auc": 0.819771
+    },
+    "pr_auc_improvement_percent": 118.29931641417832,
+    "roc_auc_improvement_percent": 4.038322179932518
+  },
+  "full_sequence_frozen_probe": {
+    "V1": {
+      "pr_auc": 0.053522,
+      "roc_auc": 0.787282
+    },
+    "V3": {
+      "pr_auc": 0.134846,
+      "roc_auc": 0.829897
+    },
+    "pr_auc_improvement_percent": 151.94499458166734,
+    "roc_auc_improvement_percent": 5.412927007095291
+  },
+  "history_only_frozen_probe": {
+    "V1": {
+      "pr_auc": 0.07459,
+      "roc_auc": 0.805694
+    },
+    "V3": {
+      "pr_auc": 0.103431,
+      "roc_auc": 0.850297
+    },
+    "pr_auc_improvement_percent": 38.66604102426597,
+    "roc_auc_improvement_percent": 5.535972714206628
+  },
+  "history_only_stability": {
+    "V1": {
+      "mean_cosine": 0.994221,
+      "median_cosine": 0.99719,
+      "mean_relative_l2": 0.087548,
+      "median_relative_l2": 0.07497,
+      "p95_relative_l2": 0.204477
+    },
+    "V3": {
+      "mean_cosine": 0.999739,
+      "median_cosine": 0.99989,
+      "mean_relative_l2": 0.017877,
+      "median_relative_l2": 0.014838,
+      "p95_relative_l2": 0.043597
+    },
+    "mean_relative_displacement_reduction_percent": 79.58034449673322,
+    "p95_displacement_reduction_percent": 78.67877560801459
+  },
+  "fixed_fpr_test": [
+    {
+      "target_fpr": "0.01%",
+      "V1_recall": 1.81,
+      "V1_precision": 27.5862,
+      "V3_recall": 6.5611,
+      "V3_precision": 58.0
+    },
+    {
+      "target_fpr": "0.05%",
+      "V1_recall": 9.0498,
+      "V1_precision": 27.7778,
+      "V3_recall": 17.1946,
+      "V3_precision": 42.2222
+    },
+    {
+      "target_fpr": "0.10%",
+      "V1_recall": 12.6697,
+      "V1_precision": 21.1321,
+      "V3_recall": 20.8145,
+      "V3_precision": 30.6667
+    },
+    {
+      "target_fpr": "0.50%",
+      "V1_recall": 22.6244,
+      "V1_precision": 8.7642,
+      "V3_recall": 28.5068,
+      "V3_precision": 10.6961
+    },
+    {
+      "target_fpr": "1.00%",
+      "V1_recall": 27.8281,
+      "V1_precision": 5.5833,
+      "V3_recall": 32.1267,
+      "V3_precision": 6.328
+    }
+  ],
+  "decision": {
+    "selected_model": "V3",
+    "decision": "ACCEPT",
+    "reason": "V3 improves frozen TEST PR-AUC and ROC-AUC, improves frozen embedding discrimination, improves history-only embedding discrimination, and improves embedding stability under the tested perturbation.",
+    "test_used_for_model_selection": false,
+    "v1_checkpoint_frozen": true,
+    "v3_checkpoint_frozen": true,
+    "chronological_order_explicitly_encoded": false
+  }
+}
